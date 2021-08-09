@@ -48,7 +48,7 @@ pub enum StateTypeEnum {
 /// Trait used for states that can be carried by BoxedState.
 pub trait StateType {
     const STATE_TYPE: StateTypeEnum;
-    fn from_enum(&mut InternalState) -> Option<&mut Self>;
+    fn from_enum(_: &mut InternalState) -> Option<&mut Self>;
 }
 
 impl StateType for InflateState {
